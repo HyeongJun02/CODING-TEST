@@ -49,7 +49,7 @@ int main(){
         vec[b].push_back(a); //양방향 간선처리
     }
     for (int i = 1; i <= n;i++){
-        sort(vec[i].begin(), vec[i].end()); // 낮은 숫자부터 탐색.
+        sort(vec[i].begin(), vec[i].end()); // 낮은 숫자부터 탐색
     }
     bfs(v);
     memset(visit, false, sizeof(visit));
