@@ -1,0 +1,1 @@
+const solution = (numbers) => numbers.reduce((sum, e) => (sum + e), 0)/numbers.length;
