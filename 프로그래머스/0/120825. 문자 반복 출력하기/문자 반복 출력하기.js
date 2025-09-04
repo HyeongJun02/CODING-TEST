@@ -1,5 +1,1 @@
-function solution(my_string, n) {
-    var answer = '';
-    for (const i of my_string) answer += i.repeat(n);
-    return answer;
-}
+const solution = (my_string, n) => [...my_string].map(ch => ch.repeat(n)).join("");
