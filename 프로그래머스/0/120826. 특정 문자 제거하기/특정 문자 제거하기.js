@@ -1,0 +1,1 @@
+const solution = (my_string, letter) => [...my_string].map(ch => (ch === letter) ? "" : ch).join('');
