@@ -1,0 +1,1 @@
+const solution = (my_string) => my_string.split('').filter(ch => /[0-9]/.test(ch)).map(Number).reduce((sum, n) => sum + n, 0);
