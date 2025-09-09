@@ -1,5 +1,1 @@
-function solution(strlist) {
-    var answer = [];
-    strlist.forEach(s => answer.push(s.length));
-    return answer;
-}
+const solution = (strlist) => strlist.map(s =>s.length);
