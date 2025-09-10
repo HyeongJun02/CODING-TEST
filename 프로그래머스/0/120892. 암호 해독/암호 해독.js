@@ -1,0 +1,1 @@
+const solution = (cipher, code) => cipher.split("").filter((ch, i) => !((i + 1) % code)).join("");
