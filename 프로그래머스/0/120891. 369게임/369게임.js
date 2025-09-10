@@ -1,0 +1,1 @@
+const solution = (order) => order.toString().split("").reduce((sum, n) => ((n % 3 == 0) && (n != 0)) ? sum + 1 : sum, 0);
