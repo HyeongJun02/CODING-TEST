@@ -1,0 +1,1 @@
+const solution = (n) => String(n).split('').reduce((sum, e) => sum + Number(e), 0);
