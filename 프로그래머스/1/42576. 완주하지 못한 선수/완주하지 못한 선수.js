@@ -1,13 +1,13 @@
 function solution(participant, completion) {
-    let hashed = []
-    participant.forEach(entry => {
-        hashed[entry] = hashed[entry] ? hashed[entry] + 1 : 1        
+    let hash = [];
+    participant.forEach((p) => {
+        hash[p] = hash[p] ? hash[p] + 1 : 1;
     })
-    completion.forEach(entry => {
-        hashed[entry] = hashed[entry] - 1
+    completion.forEach((p) => {
+        hash[p]--;
     })
-
-    for (var key in hashed) {
-        if (hashed[key] >= 1) return key
+    
+    for (let key in hash) {
+        if (hash[key] >= 1) return key;
     }
 }
