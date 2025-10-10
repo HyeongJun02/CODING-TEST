@@ -1,3 +1,10 @@
 function solution(x) {
-    return x % (+(x + "").split("").reduce((sum, n) => sum + (+n), 0)) ? false : true;
+    let num = x;
+    let sum = 0;
+    do {
+        sum += x%10;
+        x = Math.floor(x/10);
+    } while (x>0);
+
+    return !(num%sum);
 }
