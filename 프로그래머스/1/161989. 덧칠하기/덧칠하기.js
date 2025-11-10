@@ -1,15 +1,11 @@
-function solution(n, m, section) {
-    let count = 0;
-    while (section.length) {
-        let now = section[section.length - 1] - m;
-        if (now <= 0) {
-            count++;
-            break;
+function solution(n, m, sections) {
+    var answer = 0;
+    var painted = 0;
+    for(var section of sections) {
+        if(painted < section) {
+            answer++;
+            painted = section+m-1;
         }
-        while (section[section.length - 1] > now) {
-            section.pop();
-        }
-        count++;
     }
-    return count;
+    return answer;
 }
