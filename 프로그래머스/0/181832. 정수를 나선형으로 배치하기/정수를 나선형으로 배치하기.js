@@ -17,16 +17,12 @@ function solution(n) {
         right--;
         
         // 왼쪽 이동
-        if (top <= bottom) {
             for (let i = right; i >= left; i--) answer[bottom][i] = num++;
             bottom--;
-        }
 
         // 위로 이동
-        if (left <= right) {
             for (let i = bottom; i >= top; i--) answer[i][left] = num++;
             left++;
-        }
     }
 
     return answer;
