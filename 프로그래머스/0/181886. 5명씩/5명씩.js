@@ -1,0 +1,1 @@
+const solution = (names) => names.filter((name,i) => !(i%5));
