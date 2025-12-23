@@ -1,0 +1,1 @@
+const solution = (num_list) => num_list.reduce((sum,n)=>sum+n,0)**2>num_list.reduce((mul,n)=>mul*n,1)?1:0;
