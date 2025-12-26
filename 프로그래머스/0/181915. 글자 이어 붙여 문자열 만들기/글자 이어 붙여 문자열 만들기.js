@@ -1,0 +1,1 @@
+const solution = (my_string, index_list) => index_list.reduce((res, n) => res += my_string[n], "");
