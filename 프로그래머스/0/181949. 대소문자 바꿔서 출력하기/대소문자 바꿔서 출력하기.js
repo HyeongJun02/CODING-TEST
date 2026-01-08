@@ -11,7 +11,5 @@ rl.on('line', function (line) {
 }).on('close',function(){
     const regex = /[a-z]/;
     str = input[0];
-    console.log(str.split("")
-                .map((ch) => regex.test(ch) ? ch.toUpperCase() : ch.toLowerCase())
-                .join(""));
+    console.log([...str].map((ch) => regex.test(ch) ? ch.toUpperCase() : ch.toLowerCase()).join(""));
 });
