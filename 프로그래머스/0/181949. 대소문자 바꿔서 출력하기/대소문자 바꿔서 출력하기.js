@@ -9,8 +9,9 @@ let input = [];
 rl.on('line', function (line) {
     input = [line];
 }).on('close',function(){
+    const regex = /[a-z]/;
     str = input[0];
     console.log(str.split("")
-                .map((ch) => ('a' <= ch && ch <= 'z') ? ch.toUpperCase() : ch.toLowerCase())
+                .map((ch) => regex.test(ch) ? ch.toUpperCase() : ch.toLowerCase())
                 .join(""));
 });
