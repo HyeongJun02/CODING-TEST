@@ -1,6 +1,3 @@
 function solution(myString, pat) {
-    return myString
-        .split("")
-        .map((ch) => ch === 'A' ? 'B' : 'A')
-        .join("").indexOf(pat) === -1 ? 0 : 1;
+    return myString.indexOf(pat.split("").map((ch) => ch === 'A' ? 'B' : 'A').join("")) === -1 ? 0 : 1;
 }
