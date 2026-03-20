@@ -9,6 +9,12 @@
 function solution(numbers) {
     let result = [];
     for (let i = 0; i < numbers.length; i++) {
+        // 짝수의 경우
+        if (numbers[i] % 2 === 0) {
+            result.push(numbers[i] + 1);
+            continue;
+        }
+        // 홀수의 경우
         let number = numbers[i].toString(2).split("");
         number.unshift("0");
         let saveIndex;
