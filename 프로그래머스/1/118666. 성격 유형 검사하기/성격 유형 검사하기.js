@@ -1,27 +1,21 @@
 function solution(survey, choices) {
-    let res_list = {
-        'R': 0,
-        'T': 1,
-        'C': 2,
-        'F': 3,
-        'J': 4,
-        'M': 5,
-        'A': 6,
-        'N': 7
-    };
-    let res_pick = "RTCFJMAN".split("");
-    let count = Array.from(Array(4), () => Array(2).fill(0));
+    const res_list = { 'R': 0, 'T': 1, 'C': 2, 'F': 3, 'J': 4, 'M': 5, 'A': 6, 'N': 7 };
+    const res_pick = "RTCFJMAN".split("");
+    const count = Array.from(Array(4), () => Array(2).fill(0));
+    
     survey.forEach((ans, i) => {
-        let q = ans.split("");
-        if (choices[i] < 4) {
-            let index = res_list[q[0]];
-            count[~~(index / 2)][index % 2] += 4 - choices[i];
+        const [disagree, agree] = ans; 
+        const choice = choices[i];
+        
+        if (choice < 4) {
+            const index = res_list[disagree];
+            count[~~(index / 2)][index % 2] += 4 - choice;
+        } else if (choice > 4) {
+            const index = res_list[agree];
+            count[~~(index / 2)][index % 2] += choice - 4;
         }
-        else if (choices[i] > 4) {
-            let index = res_list[q[1]];
-            count[~~(index / 2)][index % 2] += choices[i] - 4;
-        }
-    })
+    });
+    
     let result = "";
     for (let i = 0; i < 4; i++) {
         result += (count[i][0] < count[i][1])
